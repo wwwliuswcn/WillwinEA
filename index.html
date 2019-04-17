@@ -16,6 +16,9 @@
 <div>
 <img id="change" src="new1.jpg?%w%mo%d%y%h%mi%s GMT+0800 (中国标准时间)">
 </div>
+<div>
+<img id="change" src="new2.jpg?%w%mo%d%y%h%mi%s GMT+0800 (中国标准时间)">
+</div>
 <script>
 function changesrc(){
 var pic=document.getElementById('change');
@@ -29,7 +32,17 @@ changesrc();
 </script>
 function changesrc(){
 var pic=document.getElementById('change');
-var img='new.jpg1?'+new Date;
+var img='new1.jpg?'+new Date;
+pic.src=img;
+window.setTimeout(changesrc,300);//刷新时间,单位:毫秒
+}
+window.onload=function(){
+changesrc();
+}
+  </script>
+function changesrc(){
+var pic=document.getElementById('change');
+var img='new2.jpg?'+new Date;
 pic.src=img;
 window.setTimeout(changesrc,300);//刷新时间,单位:毫秒
 }
