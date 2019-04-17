@@ -27,6 +27,15 @@ window.onload=function(){
 changesrc();
 }
 </script>
-
+function changesrc(){
+var pic=document.getElementById('change');
+var img='new.jpg1?'+new Date;
+pic.src=img;
+window.setTimeout(changesrc,300);//刷新时间,单位:毫秒
+}
+window.onload=function(){
+changesrc();
+}
+</script>
 </body>
 </html>
