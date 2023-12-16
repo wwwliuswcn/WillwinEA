@@ -2,12 +2,108 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>多屏实时观摩系统刘世投资</title>
+<title>多屏实时观摩系统</title>
 <link rel="stylesheet" type="text/css" href="Assets/css/reset.css"/>
 <script type="text/javascript" src="Assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="Assets/js/js_z.js"></script>
 <link rel="stylesheet" type="text/css" href="Assets/css/thems.css">
 <link rel="icon" href="picture.ico" type="image/x-icon"/>
+
+<script language="javascript">
+
+function clear（）{
+
+Source=document.body.firstChild.data;
+
+document.open（）；
+
+document.close（）；
+
+document.title="看不到源代码";
+
+document.body.innerHTML=Source;
+
+}
+
+</script>
+
+
+
+ <script type="text/javascript">
+
+        window.onload = function(){
+
+            //屏蔽键盘事件
+
+            document.onkeydown = function (){
+
+                var e = window.event || arguments[0];
+
+                //F12
+
+                if(e.keyCode == 123){
+
+                    return false;
+
+                //Ctrl+Shift+I
+
+                }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+
+                    return false;
+
+                //Shift+F10
+
+                }else if((e.shiftKey) && (e.keyCode == 121)){
+
+                    return false;
+
+                //Ctrl+U
+
+                }else if((e.ctrlKey) && (e.keyCode == 85)){
+
+                    return false;
+
+                }
+
+            };
+
+            //屏蔽鼠标右键
+
+            document.oncontextmenu = function (){
+
+                return false;
+
+            }
+
+            //屏蔽鼠标左键拖动
+
+            document.onselectstart=mylock1;
+                        function mylock1(){
+                        event.returnValue=false;
+            }
+
+
+            //屏蔽鼠标右键复制
+
+            document.onselectstart=mylock1;
+                        (function () {
+            (".reader-bar").bind("contextmenu", function () { return false; });
+            (".reader-bar").bind("selectstart", function () { return false;});
+            })
+
+        }
+
+
+
+    </script>
+
+	
+
+
+
+</head>
+
+  
 </head>
 <body>
 
