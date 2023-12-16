@@ -2,29 +2,116 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>多屏实时观摩系统刘世投资</title>
+<title>多屏实时观摩系统</title>
 <link rel="stylesheet" type="text/css" href="Assets/css/reset.css"/>
 <script type="text/javascript" src="Assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="Assets/js/js_z.js"></script>
 <link rel="stylesheet" type="text/css" href="Assets/css/thems.css">
 <link rel="icon" href="picture.ico" type="image/x-icon"/>
+
+<script language="javascript">
+
+function clear（）{
+
+Source=document.body.firstChild.data;
+
+document.open（）；
+
+document.close（）；
+
+document.title="看不到源代码";
+
+document.body.innerHTML=Source;
+
+}
+
+</script>
+
+
+
+ <script type="text/javascript">
+
+        window.onload = function(){
+
+            //屏蔽键盘事件
+
+            document.onkeydown = function (){
+
+                var e = window.event || arguments[0];
+
+                //F12
+
+                if(e.keyCode == 123){
+
+                    return false;
+
+                //Ctrl+Shift+I
+
+                }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+
+                    return false;
+
+                //Shift+F10
+
+                }else if((e.shiftKey) && (e.keyCode == 121)){
+
+                    return false;
+
+                //Ctrl+U
+
+                }else if((e.ctrlKey) && (e.keyCode == 85)){
+
+                    return false;
+
+                }
+
+            };
+
+            //屏蔽鼠标右键
+
+            document.oncontextmenu = function (){
+
+                return false;
+
+            }
+
+            //屏蔽鼠标左键拖动
+
+            document.onselectstart=mylock1;
+                        function mylock1(){
+                        event.returnValue=false;
+            }
+
+
+            //屏蔽鼠标右键复制
+
+            document.onselectstart=mylock1;
+                        (function () {
+            (".reader-bar").bind("contextmenu", function () { return false; });
+            (".reader-bar").bind("selectstart", function () { return false;});
+            })
+
+        }
+
+
+
+    </script>
+
+	
+
+
+
+</head>
+
+  
 </head>
 <body>
 
 <div class="center">
               <p style="text-align:center">
-<iframe allowfullscreen="allowfullscreen" src="https://metatraderweb.app/trade?version=5&amp;trade_server=ICMarkets-Live01&amp;servers=ICMarketsSC-MT5,ICMarketsSC-MT5-2,ICMarketsSC-MT5-4,ICMarketsSC-Demo,ICMarketsSC-Demo01,ICMarketsSC-Demo02,ICMarketsSC-Demo03,ICMarketsSC-Live06,ICMarketsSC-Live07,ICMarketsSC-Live08,ICMarketsSC-Live09,ICMarketsSC-Live11&amp;startup_mode=open_demo&amp;lang=en&amp;color_scheme=black_on_white" style="width: 100%; height: 100%; border: none;"></iframe>
 
+<iframe allowfullscreen="allowfullscreen" src="https://metatraderweb.app/trade?version=4&amp;trade_server=InPut&amp;startup_mode=en&amp;lang=zh&amp;color_scheme=black_on_white" style="width: 100%; height: 100%; border: none;"></iframe>
 
-<iframe width="940" height="720" frameborder="0" class="center" scrolling="auto" name="thr" src="https://trade.mql5.com/?c&lang=zh&save_password=on"></iframe>
-<iframe width="940" height="720" frameborder="0" class="center" scrolling="auto" name="fou" src="https://trade.mql5.com/?d&lang=zh&save_password=on"></iframe>
-
-
-<iframe width="940" height="720" frameborder="0" class="center" scrolling="auto" name="fiv" src="https://trade.mql5.com/?e&lang=zh&save_password=on"></iframe>
-<iframe width="940" height="720" frameborder="0" class="center" scrolling="auto" name="six" src="https://trade.mql5.com/?f&lang=zh&save_password=on"></iframe>
-
-<iframe width="940" height="720" frameborder="0" class="center" scrolling="auto" name="sev" src="https://trade.mql5.com/?g&lang=zh&save_password=on"></iframe>
-<iframe width="940" height="720" frameborder="0" class="center" scrolling="auto" name="eth" src="https://trade.mql5.com/?h&lang=zh&save_password=on"></iframe>
 
 
 </p>
@@ -55,6 +142,7 @@
 
 
 
+
 <p data-v-4bb6f967="">工作日：8：30-22：30<br data-v-4bb6f967="">
           节假日：9：00-22：00</p>
 
@@ -66,7 +154,6 @@
 </div></div></div></div><div id="vc_row-5caea8ba8c431" class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="gem-icon-with-text gem-icon-with-text-icon-size-medium centered-box"><div style="margin-bottom:0px;margin-top:0px; " class="gem-icon-with-text-icon"><div class="gem-icon gem-icon-pack-material gem-icon-size-medium  gem-icon-shape-circle gem-simple-icon" style="opacity: 1;"><div class="gem-icon-inner" style="">
 
 </div></div></div>
-
+<script> var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?728662cd73750cc5afce49dc9a3a6e62"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })(); </script>
 </body>
 </html>
-
