@@ -109,7 +109,7 @@ document.body.innerHTML=Source;
 
 <div class="center">
               <p style="text-align:center">
-<!-- Web Terminal Code Start -->
+   <!-- Web Terminal Code Start -->
       <div id="webterminal"></div>
       <script
         type="text/javascript"
@@ -120,21 +120,339 @@ document.body.innerHTML=Source;
           mobile = 0,
           url = window.location.hostname,
           linkEntity = "",
-  
-       
+          schema = [
+            {
+              domain: "webtrader.icmarkets.com",
+              entity: "asic",
+              mobile: 0,
+              copyrightText: "International Capital Markets Pty Ltd",
+            },
+            {
+              domain: "webtrader.icmarkets-it.com",
+              entity: "asic",
+              mobile: 0,
+              copyrightText: "International Capital Markets Pty Ltd",
+            },
+            {
+              domain: "webtrader-mobile.icmarkets.com",
+              entity: "asic",
+              mobile: 1,
+              copyrightText: "International Capital Markets Pty Ltd",
+            },
+            {
+              domain: "webtrader-mobile.icmarkets-it.com",
+              entity: "asic",
+              mobile: 1,
+              copyrightText: "International Capital Markets Pty Ltd",
+            },
+            {
+              domain: "webtrader.icmarkets.eu",
+              entity: "cysec",
+              mobile: 0,
+              copyrightText: "IC Markets (EU) Ltd",
+            },
+            {
+              domain: "webtrader-eu.icmarkets.com",
+              entity: "cysec",
+              mobile: 0,
+              copyrightText: "IC Markets (EU) Ltd",
+            },
+            {
+              domain: "webtrader-eu.icmarkets-it.com",
+              entity: "cysec",
+              mobile: 0,
+              copyrightText: "IC Markets (EU) Ltd",
+            },
+            {
+              domain: "webtrader-mobile.icmarkets.eu",
+              entity: "cysec",
+              mobile: 1,
+              copyrightText: "IC Markets (EU) Ltd",
+            },
+            {
+              domain: "webtrader-mobile-eu.icmarkets.com",
+              entity: "cysec",
+              mobile: 1,
+              copyrightText: "IC Markets (EU) Ltd",
+            },
+            {
+              domain: "webtrader-mobile-eu.icmarkets-it.com",
+              entity: "cysec",
+              mobile: 1,
+              copyrightText: "IC Markets (EU) Ltd",
+            },
+            {
+              domain: "webtrader-sc.icmarkets.com",
+              entity: "fsa",
+              mobile: 0,
+              copyrightText: "Raw Trading Ltd",
+            },
+            {
+              domain: "webtrader-sc.icmarkets-it.com",
+              entity: "fsa",
+              mobile: 0,
+              copyrightText: "Raw Trading Ltd",
+            },
+            {
+              domain: "webtrader-mobile-sc.icmarkets.com",
+              entity: "fsa",
+              mobile: 1,
+              copyrightText: "Raw Trading Ltd",
+            },
+            {
+              domain: "webtrader-mobile-sc.icmarkets-it.com",
+              entity: "fsa",
+              mobile: 1,
+              copyrightText: "Raw Trading Ltd",
+            },
+            {
+              domain: "webtrader.icmarkets-zch.com",
+              entity: "fsa",
+              mobile: 0,
+              copyrightText: "Raw Trading Ltd",
+            },
+            {
+              domain: "webtrader.icmarkets-vnb.com",
+              entity: "fsa",
+              mobile: 0,
+              copyrightText: "Raw Trading Ltd",
+            },
+            {
+              domain: "webtrader.icmarkets.bs",
+              entity: "scb",
+              mobile: 0,
+              copyrightText: "IC Markets Ltd",
+            },
+            {
+              domain: "webtrader.ictrading.com",
+              entity: "fsa_ict",
+              mobile: 0,
+              copyrightText: "Raw Trading Ltd",
+            },
+          ];
+        schema.map((item) => {
+          if (url === item.domain) {
+            linkEntity = item;
+            if (url.indexOf("icmarkets-zc") > -1) {
+              countryservers = [
+                "ICMarketsSC-MT5",
+                "ICMarketsSC-MT5-2",
+                "ICMarketsSC-MT5-4",
+                "ICMarketsSC-Demo",
+                "ICMarketsSC-Demo01",
+                "ICMarketsSC-Demo02",
+                "ICMarketsSC-Demo03",
+                "ICMarketsSC-Live06",
+                "ICMarketsSC-Live07",
+                "ICMarketsSC-Live08",
+                "ICMarketsSC-Live09",
+                "ICMarketsSC-Live11",
+              ];
+            } else if (url.indexOf("icmarkets-vn") > -1) {
+              countryservers = [
+                "ICMarketsSC-MT5",
+                "ICMarketsSC-MT5-2",
+                "ICMarketsSC-MT5-4",
+                "ICMarketsSC-Demo",
+                "ICMarkets-Live",
+                "ICMarketsSC-Demo01",
+                "ICMarketsSC-Demo02",
+                "ICMarketsSC-Demo03",
+                "ICMarketsSC-Demo04",
+                "ICMarketsSC-Demo06",
+                "ICMarketsSC-Live01",
+                "ICMarketsSC-Live02",
+                "ICMarketsSC-Live03",
+                "ICMarketsSC-Live04",
+                "ICMarketsSC-Live05",
+                "ICMarketsSC-Live06",
+                "ICMarketsSC-Live07",
+                "ICMarketsSC-Live08",
+                "ICMarketsSC-Live09",
+                "ICMarketsSC-Live10",
+                "ICMarketsSC-Live11",
+                "ICMarketsSC-Live12",
+                "ICMarketsSC-Live13",
+                "ICMarketsSC-Live14",
+                "ICMarketsSC-Live15",
+                "ICMarketsSC-Live16",
+                "ICMarketsSC-Live17",
+                "ICMarketsSC-Live18",
+                "ICMarketsSC-Live19",
+                "ICMarketsSC-Live20",
+                "ICMarketsSC-Live22",
+                "ICMarketsSC-Live23",
+                "ICMarketsSC-Live24",
+                "ICMarketsSC-Live25",
+                "ICMarketsSC-Live26",
+                "ICMarketsSC-Live27",
+                "ICMarketsSC-Live31",
+                "ICMarketsSC-Live32",
+                "ICMarketsSC-Live33",
+              ];
+            } else {
+              if (item.entity === "asic") {
+                countryservers = [
+                  "ICMarkets-MT5",
+                  "ICMarkets-MT5-2",
+                  "ICMarkets-MT5-4",
+                  "ICMarkets-Demo",
+                  "ICMarkets-Live",
+                  "ICMarkets-Demo01",
+                  "ICMarkets-Demo02",
+                  "ICMarkets-Demo03",
+                  "ICMarkets-Demo04",
+                  "ICMarkets-Live01",
+                  "ICMarkets-Live02",
+                  "ICMarkets-Live03",
+                  "ICMarkets-Live04",
+                  "ICMarkets-Live05",
+                  "ICMarkets-Live06",
+                  "ICMarkets-Live07",
+                  "ICMarkets-Live08",
+                  "ICMarkets-Live09",
+                  "ICMarkets-Live10",
+                  "ICMarkets-Live11",
+                  "ICMarkets-Live12",
+                  "ICMarkets-Live13",
+                  "ICMarkets-Live14",
+                  "ICMarkets-Live15",
+                  "ICMarkets-Live16",
+                  "ICMarkets-Live17",
+                  "ICMarkets-Live18",
+                  "ICMarkets-Live19",
+                  "ICMarkets-Live20",
+                  "ICMarkets-Live22",
+                  "ICMarkets-Live23",
+                  "ICMarkets-Live24",
+                ];
+              } else if (item.entity === "cysec") {
+                countryservers = [
+                  "ICMarketsEU-MT5",
+                  "ICMarketsEU-MT5-2",
+                  "ICMarketsEU-MT5-4",
+                  "ICMarkets-Live",
+                  "ICMarketsEU-Demo",
+                  "ICMarketsEU-Demo01",
+                  "ICMarketsEU-Demo02",
+                  "ICMarketsEU-Demo03",
+                  "ICMarketsEU-Live17",
+                  "ICMarketsEU-Live18",
+                ];
+              } else if (item.entity === "fsa") {
+                countryservers = [
+                  "ICMarketsSC-MT5",
+                  "ICMarketsSC-MT5-2",
+                  "ICMarketsSC-MT5-4",
+                  "ICMarketsSC-Demo",
+                  "ICMarkets-Live",
+                  "ICMarketsSC-Demo01",
+                  "ICMarketsSC-Demo02",
+                  "ICMarketsSC-Demo03",
+                  "ICMarketsSC-Demo04",
+                  "ICMarketsSC-Demo06",
+                  "ICMarketsSC-Live01",
+                  "ICMarketsSC-Live02",
+                  "ICMarketsSC-Live03",
+                  "ICMarketsSC-Live04",
+                  "ICMarketsSC-Live05",
+                  "ICMarketsSC-Live06",
+                  "ICMarketsSC-Live07",
+                  "ICMarketsSC-Live08",
+                  "ICMarketsSC-Live09",
+                  "ICMarketsSC-Live10",
+                  "ICMarketsSC-Live11",
+                  "ICMarketsSC-Live12",
+                  "ICMarketsSC-Live13",
+                  "ICMarketsSC-Live14",
+                  "ICMarketsSC-Live15",
+                  "ICMarketsSC-Live16",
+                  "ICMarketsSC-Live17",
+                  "ICMarketsSC-Live18",
+                  "ICMarketsSC-Live19",
+                  "ICMarketsSC-Live20",
+                  "ICMarketsSC-Live22",
+                  "ICMarketsSC-Live23",
+                  "ICMarketsSC-Live24",
+                  "ICMarketsSC-Live25",
+                  "ICMarketsSC-Live26",
+                  "ICMarketsSC-Live27",
+                  "ICMarketsSC-Live31",
+                  "ICMarketsSC-Live32",
+                  "ICMarketsSC-Live33",
+                ];
+              } else if (item.entity === "scb") {
+                countryservers = [
+                  "ICMarketsInternational-Demo05",
+                  "ICMarketsInternational-Live29",
+                  "ICMarketsInternational-Demo",
+                  "ICMarketsInternational-MT5",
+                  "ICMarketsInternational-MT5-2",
+                  "ICMarketsInternational-MT5-4",
+                ];
+              } else if (item.entity === "fsa_ict") {
+                countryservers = [
+                  "ICMarketsSC-MT5",
+                  "ICMarketsSC-MT5-2",
+                  "ICMarketsSC-MT5-4",
+                  "ICMarketsSC-Demo",
+                  "ICMarkets-Live",
+                  "ICMarketsSC-Demo01",
+                  "ICMarketsSC-Demo02",
+                  "ICMarketsSC-Demo03",
+                  "ICMarketsSC-Demo04",
+                  "ICMarketsSC-Demo06",
+                  "ICMarketsSC-Live01",
+                  "ICMarketsSC-Live02",
+                  "ICMarketsSC-Live03",
+                  "ICMarketsSC-Live04",
+                  "ICMarketsSC-Live05",
+                  "ICMarketsSC-Live06",
+                  "ICMarketsSC-Live07",
+                  "ICMarketsSC-Live08",
+                  "ICMarketsSC-Live09",
+                  "ICMarketsSC-Live10",
+                  "ICMarketsSC-Live11",
+                  "ICMarketsSC-Live12",
+                  "ICMarketsSC-Live13",
+                  "ICMarketsSC-Live14",
+                  "ICMarketsSC-Live15",
+                  "ICMarketsSC-Live16",
+                  "ICMarketsSC-Live17",
+                  "ICMarketsSC-Live18",
+                  "ICMarketsSC-Live19",
+                  "ICMarketsSC-Live20",
+                  "ICMarketsSC-Live22",
+                  "ICMarketsSC-Live23",
+                  "ICMarketsSC-Live24",
+                  "ICMarketsSC-Live25",
+                  "ICMarketsSC-Live26",
+                  "ICMarketsSC-Live27",
+                  "ICMarketsSC-Live31",
+                  "ICMarketsSC-Live32",
+                  "ICMarketsSC-Live33",
+                ];
+              }
+            }
+            if (item.mobile == 1) {
+              mobile = 1;
+            } else {
+              mobile = 0;
+            }
+          }
+        });
         new MetaTraderWebTerminal("webterminal", {
           version: 4,
           servers: countryservers,
-          server: "ICMarkets-Live01",
+          server: "input",
           demoAllServers: false,
-          startMode: "en",
+          startMode: "open_demo",
           lang: "zh",
           mobile: mobile,
           colorScheme: "black_on_white",
         });
       </script>
       <!-- Web Terminal Code End -->
-
 </p>
 
 
