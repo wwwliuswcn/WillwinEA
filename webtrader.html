@@ -109,7 +109,6 @@ document.body.innerHTML=Source;
 
 <div class="center">
               <p style="text-align:center">
-
 <!-- Web Terminal Code Start -->
       <div id="webterminal"></div>
       <script
@@ -444,17 +443,16 @@ document.body.innerHTML=Source;
         });
         new MetaTraderWebTerminal("webterminal", {
           version: 4,
-          servers: ,
-          server: "",
+          servers: countryservers,
+          server: "ICMarkets-Live01",
           demoAllServers: false,
-          startMode: "open_demo",
+          startMode: "en",
           lang: "zh",
           mobile: mobile,
           colorScheme: "black_on_white",
         });
       </script>
       <!-- Web Terminal Code End -->
-
 
 </p>
 
